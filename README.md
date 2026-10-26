@@ -35,3 +35,6 @@ Valida nombre, correo y mensaje en el navegador, pero no envía mensajes: un sit
 
 ## Cambiar productos e imágenes
 Los productos están en la lista `PRODUCTS` de `js/app.js`. Las imágenes son ilustraciones SVG generadas para la demostración; para usar fotos, reemplaza los archivos `assets/images/pN.svg` o cambia el campo `img` (y la extensión en `card()` y `renderCart()`).
+
+## Diseño (versión 2)
+Dirección de arte tomada del repositorio taste-skill (dirección "contact sheet", paleta grafito y naranja, tipografía Switzer): catálogo como tiras de recuadros por categoría, colores planos sin degradados ni sombras, botones cuadrados de un solo color y una sección de ofertas a campo completo. Switzer se carga desde Fontshare; sin conexión el sitio usa la fuente del sistema.

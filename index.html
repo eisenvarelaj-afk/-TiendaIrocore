@@ -4,90 +4,74 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>IRONCORE FITNESS | Suplementos, pesas y máquinas</title>
-<meta name="description" content="Tienda de demostración escolar: suplementos, pesas y máquinas de gimnasio.">
+<meta name="description" content="Tienda de demostración escolar: suplementos, pesas y máquinas de gimnasio en pesos colombianos.">
 <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com"><link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<div class="bar"></div>
 <header class="top">
-  <a class="brand" href="#inicio"><img src="assets/images/logo.svg" alt="" width="30" height="30">IRONCORE</a>
+  <a class="brand" href="#inicio">IRONCORE</a>
   <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menú</button>
-  <nav id="nav" aria-label="Principal">
-    <a href="#categorias">Categorías</a><a href="#catalogo">Catálogo</a><a href="#ofertas">Ofertas</a>
-    <a href="#nosotros">Nosotros</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a>
-  </nav>
-  <button class="cart-btn" id="cartBtn">Carrito <span id="cartCount" class="badge">0</span></button>
+  <nav id="nav" aria-label="Principal"><a href="#catalogo">Catálogo</a><a href="#ofertas">Ofertas</a><a href="#nosotros">Nosotros</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a></nav>
+  <button class="btn dark" id="cartBtn">Carrito <span id="cartCount" class="badge">0</span></button>
 </header>
-
 <main>
-<section id="inicio" class="hero">
-  <div class="hero-text">
-    <h1>Levanta más.<br>Recupérate mejor.</h1>
-    <p>Proteína, hierro y máquinas para armar tu gimnasio en casa. Precios en pesos colombianos.</p>
-    <div class="row"><a class="btn" href="#catalogo">Ver catálogo</a><a class="btn ghost" href="#ofertas">Ver ofertas</a></div>
-  </div>
-  <img class="hero-img" src="assets/images/hero.svg" alt="Mancuerna con discos naranjas" width="600" height="500">
-</section>
-
-<section id="categorias" class="wrap">
-  <h2>Elige tu categoría</h2>
-  <div class="cats">
-    <a href="#catalogo" data-cat="suplementos"><strong>Suplementos</strong><span>Whey, creatina, preentrenos y aminoácidos</span></a>
-    <a href="#catalogo" data-cat="pesas"><strong>Pesas y accesorios</strong><span>Mancuernas, barras, discos, bandas y guantes</span></a>
-    <a href="#catalogo" data-cat="maquinas"><strong>Máquinas de gimnasio</strong><span>Bancos, poleas y estaciones multifuncionales</span></a>
+<section id="inicio" class="open">
+  <h1>IRONCORE FITNESS</h1>
+  <div class="intro">
+    <p>Suplementos, pesas y máquinas para entrenar en casa.</p>
+    <p>Todos los precios están en pesos colombianos.</p>
+    <p>Busca por nombre o salta a una categoría con los filtros.</p>
+    <p>Es una tienda de demostración: no se procesan pagos.</p>
   </div>
 </section>
 
-<section id="catalogo" class="wrap">
-  <h2>Catálogo</h2>
+<section id="catalogo" class="sheet">
+  <h2>Catálogo de productos</h2>
   <div class="tools">
-    <input id="search" type="search" placeholder="Buscar por nombre, por ejemplo creatina" aria-label="Buscar productos">
+    <input id="search" type="search" placeholder="Buscar por nombre, por ejemplo creatina" aria-label="Buscar productos por nombre">
     <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría">
-      <button class="chip on" data-cat="todos">Todos</button>
-      <button class="chip" data-cat="suplementos">Suplementos</button>
-      <button class="chip" data-cat="pesas">Pesas y accesorios</button>
-      <button class="chip" data-cat="maquinas">Máquinas</button>
+      <button class="chip on" data-cat="todos">Todos</button><button class="chip" data-cat="suplementos">Suplementos</button>
+      <button class="chip" data-cat="pesas">Pesas y accesorios</button><button class="chip" data-cat="maquinas">Máquinas</button>
     </div>
   </div>
-  <p id="resultInfo" class="muted" aria-live="polite"></p>
-  <div id="grid" class="grid"></div>
+  <p id="resultInfo" class="small" aria-live="polite"></p>
+  <div id="grid"></div>
   <p id="noResults" class="empty" hidden>No encontramos productos con esa búsqueda. Prueba con otra palabra o elige Todos.</p>
 </section>
 
-<section id="ofertas" class="promo">
-  <div class="wrap">
-    <h2>Ofertas de la semana</h2>
-    <p class="muted">Descuentos vigentes en la demostración. Las cantidades no tienen límite de stock.</p>
-    <div id="promoGrid" class="grid"></div>
+<section id="ofertas" class="field fire">
+  <div class="split">
+    <div><h2>Ofertas de la semana</h2><p class="lead">Cuatro productos con descuento mientras dure la demostración.</p><img class="big" src="assets/images/hero.svg" alt="Barra olímpica cargada con discos" width="600" height="400"></div>
+    <div id="promoGrid"></div>
   </div>
 </section>
 
-<section id="nosotros" class="wrap about">
-  <div>
-    <h2>Nosotros</h2>
-    <p>IRONCORE FITNESS es una tienda ficticia creada para un proyecto escolar. Imaginamos un negocio colombiano que le da a cada persona lo necesario para entrenar bien, sin importar si empieza o ya compite.</p>
-    <p>Los productos, precios y promociones de este sitio son de demostración y no se pueden comprar.</p>
+<section id="nosotros" class="about">
+  <h2>Nosotros</h2>
+  <p class="lead">IRONCORE FITNESS es una tienda ficticia creada para un proyecto escolar. Imaginamos un negocio colombiano que le da a cada persona lo necesario para entrenar bien, empiece o ya compita.</p>
+  <div class="tiles">
+    <div class="t1"><strong>12</strong><span>productos en la demostración</span></div>
+    <div class="t2"><strong>3</strong><span>categorías: suplementos, pesas y máquinas</span></div>
+    <div class="t3"><strong>COP</strong><span>todos los precios en pesos colombianos</span></div>
   </div>
-  <dl class="stats">
-    <div><dt>Productos en la demo</dt><dd>12</dd></div>
-    <div><dt>Categorías</dt><dd>3</dd></div>
-    <div><dt>Envío simulado a</dt><dd>Toda Colombia</dd></div>
-  </dl>
 </section>
 
-<section id="faq" class="wrap">
+<section id="faq" class="field light">
   <h2>Preguntas frecuentes</h2>
-  <details><summary>¿Puedo comprar de verdad?</summary><p>No. Es una tienda de demostración: el carrito funciona, pero no se procesan pagos ni se piden datos bancarios.</p></details>
-  <details><summary>¿Mi carrito se guarda?</summary><p>Sí, en este navegador. Si cierras la pestaña y vuelves, tus productos siguen ahí.</p></details>
-  <details><summary>¿Cómo busco un producto?</summary><p>Escribe el nombre en el buscador del catálogo o elige una categoría con los botones de filtro.</p></details>
-  <details><summary>¿Los precios están en pesos colombianos?</summary><p>Sí, todos los precios están en COP.</p></details>
+  <div class="qa">
+    <div><h3>¿Puedo comprar de verdad?</h3><p>No. El carrito funciona, pero no se procesan pagos ni se piden datos bancarios.</p></div>
+    <div><h3>¿Mi carrito se guarda?</h3><p>Sí, en este navegador. Si cierras la pestaña y vuelves, tus productos siguen ahí.</p></div>
+    <div><h3>¿Cómo busco un producto?</h3><p>Escribe el nombre en el buscador del catálogo o elige una categoría con los botones de filtro.</p></div>
+    <div><h3>¿Los precios están en pesos?</h3><p>Sí, todos los precios están en pesos colombianos (COP).</p></div>
+  </div>
 </section>
 
-<section id="contacto" class="wrap contact">
-  <div>
-    <h2>Contacto</h2>
-    <p>Escríbenos tu duda sobre la demostración. Este formulario valida los datos en tu navegador, pero no envía mensajes reales: para eso se necesita un servicio externo (por ejemplo Formspree), como explica el README.</p>
-  </div>
+<section id="contacto" class="contact">
+  <div><h2>Contacto</h2><p class="lead">Escríbenos tu duda. El formulario valida tus datos, pero no envía mensajes reales: para eso se necesita un servicio externo, como explica el README.</p></div>
   <form id="contactForm" novalidate>
     <label>Nombre<input name="name" autocomplete="name"><span class="err" data-for="name"></span></label>
     <label>Correo electrónico<input name="email" type="email" autocomplete="email"><span class="err" data-for="email"></span></label>
@@ -99,16 +83,16 @@
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <div><strong>IRONCORE FITNESS</strong><p class="muted">Tienda ficticia para un proyecto escolar.</p></div>
-    <div><a href="#catalogo">Catálogo</a><a href="#ofertas">Ofertas</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a></div>
-    <div><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com" target="_blank" rel="noopener">TikTok</a></div>
+  <div class="foot">
+    <a href="#catalogo">Catálogo</a><a href="#ofertas">Ofertas</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a>
+    <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com" target="_blank" rel="noopener">TikTok</a>
   </div>
+  <p class="mega" aria-hidden="true">IRONCORE FITNESS</p>
 </footer>
 
 <div id="overlay" hidden></div>
 <aside id="cart" aria-label="Carrito de compras" aria-hidden="true">
-  <div class="cart-head"><h2>Tu carrito</h2><button class="x" id="closeCart" aria-label="Cerrar carrito">Cerrar</button></div>
+  <div class="cart-head"><h2>Tu carrito</h2><button class="btn ghost" id="closeCart">Cerrar</button></div>
   <p id="cartEmpty" class="empty">Tu carrito está vacío. Agrega un producto del catálogo para empezar.</p>
   <ul id="cartItems"></ul>
   <div class="cart-foot">
